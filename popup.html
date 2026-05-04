@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amazon Review Extractor</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="brand-mark"><img src="icons/icon48.png"></div>
+      <div>
+        <h1>Review Extractor</h1>
+        <p class="sub" id="status-line">Checking page…</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="controls">
+      <button id="extract-btn" class="btn btn-primary" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Extract Page
+      </button>
+      <button id="clear-btn" class="btn btn-ghost" title="Clear stored reviews for this product">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+          <path d="M10 11v6M14 11v6"></path>
+          <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+        </svg>
+        Clear
+      </button>
+    </div>
+
+    <div class="stats" id="stats">No reviews extracted yet.</div>
+
+    <div class="textarea-wrap">
+      <button id="copy-btn" class="copy-btn" title="Copy to clipboard" aria-label="Copy to clipboard">
+        <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </button>
+      <textarea id="output" spellcheck="false" placeholder="Extracted reviews will appear here as TSV (tab-separated)."></textarea>
+    </div>
+
+    <div class="hint" id="hint">
+      Tip: navigate through review pages and click <strong>Extract Page</strong> on each. Duplicates are skipped automatically.
+    </div>
+    <div class="stats">Meet developer <a href="https://www.linkedin.com/in/ahmedshaikhm">Ahmed Memon</a></div>
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
