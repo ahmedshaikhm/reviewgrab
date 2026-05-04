@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "ReviewGrab - Reviews to TSV",
+  "version": "1.0.3",
+  "description": "Export product reviews to TSV. Copy to Excel or Google Sheets in one click. Multi-page capture with duplicate detection.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.de/*",
+    "*://*.amazon.fr/*",
+    "*://*.amazon.it/*",
+    "*://*.amazon.es/*",
+    "*://*.amazon.ca/*",
+    "*://*.amazon.com.mx/*",
+    "*://*.amazon.com.br/*",
+    "*://*.amazon.co.jp/*",
+    "*://*.amazon.in/*",
+    "*://*.amazon.com.au/*",
+    "*://*.amazon.nl/*",
+    "*://*.amazon.se/*",
+    "*://*.amazon.pl/*",
+    "*://*.amazon.ae/*",
+    "*://*.amazon.sa/*",
+    "*://*.amazon.sg/*",
+    "*://*.amazon.com.tr/*",
+    "*://*.amazon.eg/*",
+    "*://*.amazon.com.be/*",
+    "*://*.amazon.cn/*",
+    "*://*.amazon.co.za/*",
+    "*://*.amazon.ie/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ReviewGrab",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
