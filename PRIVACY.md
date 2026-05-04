@@ -65,4 +65,4 @@ If this privacy policy is updated, the "Last updated" date at the top will be re
 
 For questions, bug reports, or privacy concerns, please open an issue at:
 
-https://github.com/YOUR-USERNAME/reviewgrab/issues
+https://github.com/ahmedshaikhm/reviewgrab/issues
